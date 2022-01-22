@@ -1,4 +1,7 @@
-## Week 1 Homework
+# DE-Zoomcamp: Week 1 Homework
+- Date: 2022-01-22
+- By: Sofi GS :wave:
+
 
 In this homework we'll prepare the environment 
 and practice with terraform and SQL
