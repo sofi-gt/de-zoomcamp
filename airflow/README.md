@@ -98,3 +98,30 @@ In the `docker-compose.yaml` you can stop the loading of airflow examples changi
 ```yaml
 AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
 ```
+
+# Build the docker image
+
+In the `airflow` directory where you have the docker-compose.yaml file
+
+```bash
+docker-compose build
+```
+
+The build may take 15-20 minutes for the first time..
+You will only need to run the build command whenever there is a change in the `Dockerfile`
+
+# Initialize service
+
+```bash
+docker-compose up airflow init
+```
+After the initialization it should finish with success code 0.
+
+Then we can kick-up all the other services in the container including the backend and the workers.
+```bash
+docker-compose up
+```
+
+# Open airflow
+
+When the webservice is running and healthy go to `0.0.0.0:8080` in your browser.
